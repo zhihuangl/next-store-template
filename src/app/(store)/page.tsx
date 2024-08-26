@@ -15,7 +15,7 @@ export const metadata = {
 export default async function Home() {
 	const products = await Commerce.productBrowse({ first: 6 });
 	const { config } = await Commerce.contextGet();
-
+	console.log(products);
 	return (
 		<main>
 			{config.hero.show && (
